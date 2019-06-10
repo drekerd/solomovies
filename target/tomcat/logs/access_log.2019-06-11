@@ -1,0 +1,2 @@
+127.0.0.1 - - [11/Jun/2019:00:26:07 +0100] "GET /best/year?year=2014 HTTP/1.1" 200 9404 http-bio-8080-exec-3 557
+0:0:0:0:0:0:0:1 - - [11/Jun/2019:00:26:07 +0100] "GET /faces/index.xhtml HTTP/1.1" 200 10184 http-bio-8080-exec-7 608

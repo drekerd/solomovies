@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>com.mario.frontend.Hello World JSF</title>
+    </h:head>
+    <h:body>
+        <h1><h:outputText value="#{hello.getHello()}"/></h1>
+
+        <h:dataTable value="#{movieService.movies}" var="movie"
+                     rowClasses="odd, even">
+            <h:column>
+                <h:graphicImage value = "#{movie.thumbnailFullLink}" width="250" height="400"/>
+            </h:column>
+            <h:column>
+                #{movie.name}
+                <br/>
+                #{movie.description}
+            </h:column>
+
+
+        </h:dataTable>
+    </h:body>
+</h:html>
