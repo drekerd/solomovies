@@ -1,4 +1,9 @@
-com/mario/bestMovies/MoviesServiceBestYear.class
-com/mario/bestMovies/BestMoviesApiCall.class
-com/mario/bestMovies/MovieResponse.class
-com/mario/bestMovies/BestMoviesService.class
+com/mario/backend/bestMovies/BestMoviesApiCall.class
+com/mario/frontend/Hello.class
+com/mario/backend/images/ImageApiCall.class
+com/mario/backend/bestMovies/MoviesServiceBestYear.class
+com/mario/backend/bestMovies/BestMoviesService.class
+com/mario/backend/bestMovies/MovieResponse.class
+com/mario/frontend/MovieService.class
+com/mario/frontend/BestFilm.class
+com/mario/frontend/MovieService$1.class

@@ -1,4 +1,8 @@
-/home/mariosilva/IdeaProjects/solomovies/src/main/java/com/mario/bestMovies/BestMoviesApiCall.java
-/home/mariosilva/IdeaProjects/solomovies/src/main/java/com/mario/bestMovies/BestMoviesService.java
-/home/mariosilva/IdeaProjects/solomovies/src/main/java/com/mario/bestMovies/MovieResponse.java
-/home/mariosilva/IdeaProjects/solomovies/src/main/java/com/mario/bestMovies/MoviesServiceBestYear.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/frontend/Hello.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/frontend/BestFilm.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/images/ImageApiCall.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/bestMovies/BestMoviesApiCall.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/bestMovies/MovieResponse.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/bestMovies/BestMoviesService.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/frontend/MovieService.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/bestMovies/MoviesServiceBestYear.java
