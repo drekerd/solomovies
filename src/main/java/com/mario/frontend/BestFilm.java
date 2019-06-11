@@ -9,5 +9,4 @@ public class BestFilm {
     String name;
     String description;
     String thumbnailFullLink;
-
 }

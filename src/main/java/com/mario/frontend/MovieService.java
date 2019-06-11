@@ -27,12 +27,33 @@ public class MovieService {
 
     List<BestFilm> movies;
     String backendResponse;
+    String year;
 
 
     @PostConstruct
     public void fetchMovies() {
 
-        final String uri = "http://localhost:8080/best/year?year=2014";
+        if(year==null){
+            year="2018";
+        }
+
+        final String uri = "http://localhost:8080/best/year?year="+year;
+
+        this.backendResponse = callRumosApi(uri);
+
+        this.movies = buildResponse(backendResponse);
+    }
+
+    public void checkYear(){
+        System.out.println(year);
+    }
+
+    public void fetchMoviesByYear() {
+
+        System.out.println(year);
+
+
+        final String uri = "http://localhost:8080/best/year?year"+year;
 
         this.backendResponse = callRumosApi(uri);
 
