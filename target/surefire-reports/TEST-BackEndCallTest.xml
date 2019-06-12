@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="BackEndCallTest" time="0.02" tests="1" errors="0" skipped="1" failures="0">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/mariosilva/workspace/IdeaProjects/solomovies/target/test-classes:/home/mariosilva/workspace/IdeaProjects/solomovies/target/classes:/home/mariosilva/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/mariosilva/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/mariosilva/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar:/home/mariosilva/.m2/repository/com/sun/jersey/jersey-json/1.18.1/jersey-json-1.18.1.jar:/home/mariosilva/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar:/home/mariosilva/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar:/home/mariosilva/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/home/mariosilva/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/home/mariosilva/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar:/home/mariosilva/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar:/home/mariosilva/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar:/home/mariosilva/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar:/home/mariosilva/.m2/repository/com/sun/jersey/jersey-core/1.18.1/jersey-core-1.18.1.jar:/home/mariosilva/.m2/repository/com/owlike/genson/0.99/genson-0.99.jar:/home/mariosilva/.m2/repository/javax/javaee-api/8.0/javaee-api-8.0.jar:/home/mariosilva/.m2/repository/com/sun/mail/javax.mail/1.6.0/javax.mail-1.6.0.jar:/home/mariosilva/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/mariosilva/.m2/repository/com/sun/faces/jsf-api/2.1.7/jsf-api-2.1.7.jar:/home/mariosilva/.m2/repository/com/sun/faces/jsf-impl/2.1.7/jsf-impl-2.1.7.jar:/home/mariosilva/.m2/repository/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.jar:/home/mariosilva/.m2/repository/com/sun/jersey/jersey-server/1.19.1/jersey-server-1.19.1.jar:/home/mariosilva/.m2/repository/org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8.jar:/home/mariosilva/.m2/repository/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar:/home/mariosilva/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/mariosilva/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/mariosilva/.m2/repository/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="user.country.format" value="PT"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
+    <property name="sun.java.command" value="/home/mariosilva/workspace/IdeaProjects/solomovies/target/surefire/surefirebooter3239507715394257687.jar /home/mariosilva/workspace/IdeaProjects/solomovies/target/surefire 2019-06-11T22-31-54_856-jvmRun1 surefire6309793366397812848tmp surefire_07879618085505475065tmp"/>
+    <property name="surefire.test.class.path" value="/home/mariosilva/workspace/IdeaProjects/solomovies/target/test-classes:/home/mariosilva/workspace/IdeaProjects/solomovies/target/classes:/home/mariosilva/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/mariosilva/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/mariosilva/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar:/home/mariosilva/.m2/repository/com/sun/jersey/jersey-json/1.18.1/jersey-json-1.18.1.jar:/home/mariosilva/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar:/home/mariosilva/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar:/home/mariosilva/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/home/mariosilva/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/home/mariosilva/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar:/home/mariosilva/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar:/home/mariosilva/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar:/home/mariosilva/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar:/home/mariosilva/.m2/repository/com/sun/jersey/jersey-core/1.18.1/jersey-core-1.18.1.jar:/home/mariosilva/.m2/repository/com/owlike/genson/0.99/genson-0.99.jar:/home/mariosilva/.m2/repository/javax/javaee-api/8.0/javaee-api-8.0.jar:/home/mariosilva/.m2/repository/com/sun/mail/javax.mail/1.6.0/javax.mail-1.6.0.jar:/home/mariosilva/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/mariosilva/.m2/repository/com/sun/faces/jsf-api/2.1.7/jsf-api-2.1.7.jar:/home/mariosilva/.m2/repository/com/sun/faces/jsf-impl/2.1.7/jsf-impl-2.1.7.jar:/home/mariosilva/.m2/repository/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.jar:/home/mariosilva/.m2/repository/com/sun/jersey/jersey-server/1.19.1/jersey-server-1.19.1.jar:/home/mariosilva/.m2/repository/org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8.jar:/home/mariosilva/.m2/repository/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar:/home/mariosilva/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/mariosilva/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/mariosilva/.m2/repository/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/mariosilva"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
+    <property name="basedir" value="/home/mariosilva/workspace/IdeaProjects/solomovies"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/mariosilva/workspace/IdeaProjects/solomovies/target/surefire/surefirebooter3239507715394257687.jar"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_212-8u212-b03-0ubuntu1.18.04.1-b03"/>
+    <property name="user.name" value="mariosilva"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="4.15.0-51-generic"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/mariosilva/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="1.8.0_212"/>
+    <property name="user.dir" value="/home/mariosilva/workspace/IdeaProjects/solomovies"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="user.language.format" value="pt"/>
+    <property name="idea.version2019.1.3" value="true"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.212-b03"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testBackendCall" classname="BackEndCallTest" time="0">
+    <skipped/>
+  </testcase>
+</testsuite>

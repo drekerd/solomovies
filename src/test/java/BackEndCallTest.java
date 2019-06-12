@@ -5,6 +5,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.io.IOException;
 public class BackEndCallTest {
 
     @Test
+    @Ignore
     public void testBackendCall() throws IOException {
         //http call to
         final String uri = "http://localhost:8080/best/year?year=2014";
