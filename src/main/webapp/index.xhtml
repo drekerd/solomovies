@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <h:html xmlns="http://www.w3.org/1999/xhtml"
         xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:f="http://java.sun.com/jsf/core">
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>com.mario.frontend.Hello World JSF</title>
         <h:outputStylesheet name="css/lookingGood.css"/>
@@ -39,7 +40,18 @@
             </h:dataTable>
             </div>
 
-
+            <!--<p:dataTable styleClass="movie-table" value="#{movieService.movies}" var="movie"
+                         rowClasses="odd-row, even-row" rows="10" paginator="true">
+                <p:column styleClass="movieTable" >
+                    <h:graphicImage value = "#{movie.thumbnailFullLink}" width="250" height="400"/>
+                </p:column>
+                <p:column>
+                    <h:outputText class="name" value="#{movie.name}"/>
+                    <br/>
+                    <div class="space-name-desc"></div>
+                    <h:outputText class="description" value="#{movie.description}"/>
+                </p:column>
+            </p:dataTable>-->
         </div>
     </h:body>
 </h:html>

@@ -6,6 +6,7 @@ import lombok.Data;
 @Data
 public class BestFilm {
 
+    long id;
     String name;
     String description;
     String thumbnailFullLink;
