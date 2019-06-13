@@ -16,6 +16,7 @@
     <init-param>
       <param-name>com.sun.jersey.config.property.packages</param-name>
       <param-value>com.mario.backend.bestMovies</param-value>
+      <param-value>com.mario.backend.movies</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>

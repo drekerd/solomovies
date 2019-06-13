@@ -1,0 +1,3 @@
+0:0:0:0:0:0:0:1 - - [14/Jun/2019:00:24:45 +0100] "GET /details/movie?id=157336 HTTP/1.1" 500 7131 http-bio-8080-exec-1 898
+0:0:0:0:0:0:0:1 - - [14/Jun/2019:00:28:53 +0100] "GET /details/movie?id=157336 HTTP/1.1" 200 528 http-bio-8080-exec-1 1457
+0:0:0:0:0:0:0:1 - - [14/Jun/2019:00:30:09 +0100] "GET /details/movie?id=157336 HTTP/1.1" 200 569 http-bio-8080-exec-1 1451

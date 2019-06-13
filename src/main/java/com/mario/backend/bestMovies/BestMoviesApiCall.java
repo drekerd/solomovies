@@ -37,7 +37,7 @@ public class BestMoviesApiCall {
 
         if(year != null){
             uri += "?primary_release_year=" + year + "&sort_by=vote_average.desc";
-        }
+        }else
         uri += "?primary_release_year=" + 2019 + "&sort_by=vote_average.desc"+"&api_key="+API_KEY;
 
         String bodyAsString = callTMDBApi(uri);
