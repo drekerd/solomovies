@@ -42,17 +42,6 @@ public class MovieService {
         this.movies = buildResponse(backendResponse);
     }
 
-    public void getMovieByName() {
-
-        if(year==null){
-            year="2019";
-        }
-
-        final String uri = "http://localhost:8080/best/year?year="+year;
-        this.backendResponse = callRumosApi(uri);
-        this.movies = buildResponse(backendResponse);
-    }
-
     public void checkYear(){
         System.out.println(year);
     }

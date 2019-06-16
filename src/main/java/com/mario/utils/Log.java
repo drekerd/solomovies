@@ -32,8 +32,5 @@ public class Log {
     public Log() throws IOException {
 
         logger = Logger.getLogger("test");
-        logger.addHandler(fileHandler);
-        SimpleFormatter formatter = new SimpleFormatter();
-        fileHandler.setFormatter(formatter);
     }
 }

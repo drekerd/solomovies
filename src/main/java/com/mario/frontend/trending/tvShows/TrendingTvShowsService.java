@@ -1,7 +1,9 @@
-package com.mario.frontend.searchMovieByName;
+package com.mario.frontend.trending.tvShows;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.mario.frontend.movies.MovieByIdFE;
+import com.mario.frontend.trending.movies.TrendingMoviesFromBE;
 import com.mario.utils.Log;
 import lombok.Data;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -15,14 +17,12 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.List;
-import java.util.Map;
 
 @Data
 @ManagedBean
-public class MovieByNameService implements Serializable {
-
+@RequestScoped
+public class TrendingTvShowsService {
     Log movieByNameLOG;
 
     {
@@ -33,35 +33,20 @@ public class MovieByNameService implements Serializable {
         }
     }
 
-    List<MovieByNameFromBE> movies;
+    List<TrendingTvShowsFromBE> tvShows;
     String backendResponse;
+    MovieByIdFE show;
 
-    FacesContext fc = FacesContext.getCurrentInstance();
-    String name;
+    //FacesContext fc = FacesContext.getCurrentInstance();
 
     @PostConstruct
-    public void fetchMovies() {
-        String uri = "http://localhost:8080/search/movie?movie=";
+    public void fetchTvShows() {
 
-        if (name == null) {
-            uri = "http://localhost:8080/trending/movie";
-        }else
-            uri += name;
-
+        final String uri = "http://localhost:8080/trending/tvshow";
         movieByNameLOG.logger.info(this.getClass().getName()+" URI " +uri);
         this.backendResponse = callRumosApi(uri);
-        this.movies = buildResponse(backendResponse);
-
-    }
-
-    public String changePage(){
-        return "movie.xhtml";
-    }
-
-    public String getIdParam(FacesContext fc){
-
-        Map<String,String> params = fc.getExternalContext().getRequestParameterMap();
-        return params.get("movieName");
+        movieByNameLOG.logger.info(this.getClass().getName()+" payload " +this.backendResponse);
+        this.tvShows = buildResponse(backendResponse);
 
     }
 
@@ -74,14 +59,14 @@ public class MovieByNameService implements Serializable {
             return bodyAsString;
         } catch (IOException e) {
         }
-        return "erro";
+        return "error";
     }
 
-    public List<MovieByNameFromBE> buildResponse(String jsonBackendResponse) {
+    public List<TrendingTvShowsFromBE> buildResponse(String jsonBackendResponse) {
 
-        final List<MovieByNameFromBE> backendResponseAsObject = new GsonBuilder()
+        final List<TrendingTvShowsFromBE> backendResponseAsObject = new GsonBuilder()
                 .create()
-                .fromJson(jsonBackendResponse, new TypeToken<List<MovieByNameFromBE>>() {
+                .fromJson(jsonBackendResponse, new TypeToken<List<TrendingTvShowsFromBE>>(){
                 }.getType());
         return backendResponseAsObject;
     }

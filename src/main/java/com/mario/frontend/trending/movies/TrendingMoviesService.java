@@ -1,4 +1,4 @@
-package com.mario.frontend.searchMovieByName;
+package com.mario.frontend.trending.movies;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -13,15 +13,13 @@ import org.apache.http.util.EntityUtils;
 import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
-import javax.faces.context.FacesContext;
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.List;
-import java.util.Map;
 
 @Data
 @ManagedBean
-public class MovieByNameService implements Serializable {
+@RequestScoped
+public class TrendingMoviesService {
 
     Log movieByNameLOG;
 
@@ -33,35 +31,19 @@ public class MovieByNameService implements Serializable {
         }
     }
 
-    List<MovieByNameFromBE> movies;
+    List<TrendingMoviesFromBE> movies;
     String backendResponse;
 
-    FacesContext fc = FacesContext.getCurrentInstance();
+    //FacesContext fc = FacesContext.getCurrentInstance();
     String name;
 
     @PostConstruct
     public void fetchMovies() {
-        String uri = "http://localhost:8080/search/movie?movie=";
 
-        if (name == null) {
-            uri = "http://localhost:8080/trending/movie";
-        }else
-            uri += name;
-
+        final String uri = "http://localhost:8080/trending/movie";
         movieByNameLOG.logger.info(this.getClass().getName()+" URI " +uri);
         this.backendResponse = callRumosApi(uri);
         this.movies = buildResponse(backendResponse);
-
-    }
-
-    public String changePage(){
-        return "movie.xhtml";
-    }
-
-    public String getIdParam(FacesContext fc){
-
-        Map<String,String> params = fc.getExternalContext().getRequestParameterMap();
-        return params.get("movieName");
 
     }
 
@@ -77,11 +59,11 @@ public class MovieByNameService implements Serializable {
         return "erro";
     }
 
-    public List<MovieByNameFromBE> buildResponse(String jsonBackendResponse) {
+    public List<TrendingMoviesFromBE> buildResponse(String jsonBackendResponse) {
 
-        final List<MovieByNameFromBE> backendResponseAsObject = new GsonBuilder()
+        final List<TrendingMoviesFromBE> backendResponseAsObject = new GsonBuilder()
                 .create()
-                .fromJson(jsonBackendResponse, new TypeToken<List<MovieByNameFromBE>>() {
+                .fromJson(jsonBackendResponse, new TypeToken<List<TrendingMoviesFromBE>>(){
                 }.getType());
         return backendResponseAsObject;
     }

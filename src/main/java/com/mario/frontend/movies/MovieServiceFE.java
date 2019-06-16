@@ -31,7 +31,7 @@ public class MovieServiceFE implements Serializable {
 
     {
         try {
-            movieServiceFE = new Log("movieServiceFE.txt");
+            movieServiceFE = new Log();
         } catch (IOException e) {
             e.printStackTrace();
         }
