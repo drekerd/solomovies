@@ -1,10 +1,12 @@
 package com.mario.backend.bestMovies;
 
+import com.mario.utils.Log;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.Setter;
 
 import javax.ws.rs.Produces;
+import java.io.IOException;
 
 @Data
 @Produces("application/json")
@@ -19,13 +21,11 @@ public class MovieResponse {
     private String thumbnailFullLink;
 
     public void setDescription(String description){
-        System.out.printf("aqi");
         if(description.isEmpty()){
             this.description="No Description available";
         }else{
             this.description=description;
         }
-
     }
 
 }

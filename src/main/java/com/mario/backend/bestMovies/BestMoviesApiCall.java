@@ -2,6 +2,7 @@ package com.mario.backend.bestMovies;
 
 import com.google.gson.GsonBuilder;
 import com.mario.backend.images.ImageApiCall;
+import com.mario.utils.Log;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -16,11 +17,17 @@ import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 
 @Path("best")
 public class BestMoviesApiCall {
     private static final String BASE_URL = "https://api.themoviedb.org/3/discover/movie";
     private static final String API_KEY = "db10e7a8660d7d089fb952a7a4fe4d13";
+    Log bestMoviesLog = new Log("BestMoviesLog.txt");
+
+
+    public BestMoviesApiCall() throws IOException {
+    }
 
     @GET
     @Path("/hello")
@@ -36,9 +43,13 @@ public class BestMoviesApiCall {
         String uri = BASE_URL;
 
         if(year != null){
-            uri += "?primary_release_year=" + year + "&sort_by=vote_average.desc";
-        }else
-        uri += "?primary_release_year=" + 2019 + "&sort_by=vote_average.desc"+"&api_key="+API_KEY;
+            uri += "?primary_release_year=" +year+ "&sort_by=vote_average.desc"+"&api_key="+API_KEY;
+        }else {
+            bestMoviesLog.logger.setLevel(Level.WARNING);
+            bestMoviesLog.logger.warning("NO PARAMETER YEAR SELECTED");
+        }
+
+        bestMoviesLog.logger.info("API CALL ENDPOINT"+uri);
 
         String bodyAsString = callTMDBApi(uri);
 

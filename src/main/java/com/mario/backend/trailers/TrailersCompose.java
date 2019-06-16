@@ -14,9 +14,9 @@ import java.util.List;
 
 public class TrailersCompose {
 
-    private final String YOUTUBE_BASE_URL = "https://www.youtube.com/watch?v=";
+    //private final String YOUTUBE_BASE_URL = "https://www.youtube.com/watch?v=";
+    private final String YOUTUBE_BASE_URL = "https://www.youtube.com/embed/";
     private final String BASE_URL = "https://api.themoviedb.org/3/movie/";
-
     private static final String API_KEY = "db10e7a8660d7d089fb952a7a4fe4d13";
 
     public String composeTrailerURL(long id) throws IOException {
@@ -34,7 +34,12 @@ public class TrailersCompose {
                 .fromJson(bodyAsString,MovieByID.class);
 
         List<MovieTrailers> movieTrailers = trailersUrls.getMovieTrailers();
-        return movieTrailers.get(0).getTrailerPath();
+        for(MovieTrailers m : movieTrailers){
+            if(m.getTrailerPath()!=null){
+                return m.getTrailerPath();
+            }
+        }
+        return null;
     }
 
     private String callTMDBApi(final String uri) throws IOException {

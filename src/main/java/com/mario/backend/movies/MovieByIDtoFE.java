@@ -17,7 +17,7 @@ public class MovieByIDtoFE {
     private String trailerFulURL;
 
     public MovieByIDtoFE(MovieByID movieByID) {
-
+        this.id = movieByID.id;
         this.name = movieByID.getName();
         this.description = checkDescription(movieByID.getDescription());
         this.popularity = movieByID.getPopularity();

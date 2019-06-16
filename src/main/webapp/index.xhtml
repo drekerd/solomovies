@@ -20,6 +20,12 @@
                 <h:inputText class="year" value="#{movieService.year}"/>
                 <h:commandButton value="submit" action="#{movieService.fetchMovies}"/>
             </h:form>
+
+            <h:form target="_blank">
+                <h:inputText class="search" value="#{movieByName.name}"/>
+                <h:commandButton value="submit" action="movie.xhtml?faces-redirect=true"/>
+            </h:form>
+
         </div>
 
         <div class="container">
@@ -32,7 +38,9 @@
                     <h:graphicImage value = "#{movie.thumbnailFullLink}" width="250" height="400"/>
                 </h:column>
                 <h:column>
-                    <h:outputText class="name" value="#{movie.name}"/>
+                    <h:link class="name" value="#{movie.name}" target="_blank" onclick="movieDetails.fetchMovies()" update=":change" outcome="details.xhtml">
+                        <f:param name="movieID" value="#{movie.id}"/>
+                    </h:link>
                     <br/>
                     <div class="space-name-desc"></div>
                     <h:outputText class="description" value="#{movie.description}"/>

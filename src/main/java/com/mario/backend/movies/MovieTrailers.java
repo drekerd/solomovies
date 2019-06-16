@@ -5,7 +5,6 @@ import lombok.Data;
 
 @Data
 public class MovieTrailers {
-
     @SerializedName("key")
     private String trailerPath;
 }

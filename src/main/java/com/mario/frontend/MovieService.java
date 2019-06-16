@@ -34,13 +34,22 @@ public class MovieService {
     public void fetchMovies() {
 
         if(year==null){
-            year="2018";
+            year="2019";
         }
 
         final String uri = "http://localhost:8080/best/year?year="+year;
-
         this.backendResponse = callRumosApi(uri);
+        this.movies = buildResponse(backendResponse);
+    }
 
+    public void getMovieByName() {
+
+        if(year==null){
+            year="2019";
+        }
+
+        final String uri = "http://localhost:8080/best/year?year="+year;
+        this.backendResponse = callRumosApi(uri);
         this.movies = buildResponse(backendResponse);
     }
 

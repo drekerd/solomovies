@@ -1,7 +1,9 @@
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/frontend/Hello.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/frontend/BestFilm.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/images/ImageApiCall.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/utils/Log.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/bestMovies/MovieResponse.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/frontend/searchMovieByName/MovieByNameService.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/trailers/TrailersCompose.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/frontend/MovieService.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/frontend/movies/MovieByIdFE.java
@@ -9,7 +11,12 @@
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/movies/MovieByID.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/movies/MovieByIDtoFE.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/frontend/movies/MovieServiceFE.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/findByName/MovieAPICall.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/findByName/MovieResponseToFE.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/frontend/searchMovieByName/MovieByNameFromBE.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/bestMovies/BestMoviesApiCall.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/bestMovies/BestMoviesService.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/movies/MovieByIdService.java
 /home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/bestMovies/MoviesServiceBestYear.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/findByName/MoviesService.java
+/home/mariosilva/workspace/IdeaProjects/solomovies/src/main/java/com/mario/backend/findByName/MovieStore.java

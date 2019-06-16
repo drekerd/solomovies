@@ -1,6 +1,9 @@
 package com.mario.frontend.movies;
 
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+import com.mario.frontend.BestFilm;
+import com.mario.utils.Log;
 import lombok.Data;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -10,28 +13,59 @@ import org.apache.http.util.EntityUtils;
 
 import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
+import javax.enterprise.context.RequestScoped;
+import javax.faces.annotation.ManagedProperty;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
 
 @Data
 @ManagedBean
-public class MovieServiceFE {
+@RequestScoped
+public class MovieServiceFE implements Serializable {
 
-    //List<MovieByIdFE> movie;
+    Log movieServiceFE;
+
+    {
+        try {
+            movieServiceFE = new Log("movieServiceFE.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     MovieByIdFE movie;
     String backendResponse;
-    long id;
 
+     /*@ManagedProperty(value = "#{movieID}")
+     long id;*/
+
+    FacesContext fc = FacesContext.getCurrentInstance();
+    String movieID;
 
     @PostConstruct
     public void fetchMovies() {
 
-        final String uri = "https://api.themoviedb.org/3/movie/552095?api_key=db10e7a8660d7d089fb952a7a4fe4d13";
+        this.movieID = getIdParam(fc);
 
+        final String uri = "http://localhost:8080/details/movie?id=" + movieID;
+        movieServiceFE.logger.info("URI FOR REQUEST " + uri);
         this.backendResponse = callRumosApi(uri);
+        movieServiceFE.logger.info("BackEnd Response +" + backendResponse);
 
         this.movie = buildResponse(backendResponse);
+        movieServiceFE.logger.info("Movie Returned from json Converter" + this.movie.toString());
     }
 
+    public String getIdParam(FacesContext fc){
+
+        Map<String,String> params = fc.getExternalContext().getRequestParameterMap();
+        return params.get("movieID");
+
+    }
 
     private String callRumosApi(final String uri) {
 
@@ -42,21 +76,15 @@ public class MovieServiceFE {
             return bodyAsString;
         } catch (IOException e) {
         }
-        return "erro";
+        return "error";
     }
 
     public MovieByIdFE buildResponse(String jsonBackendResponse) {
 
         final MovieByIdFE backendResponseAsObject = new GsonBuilder()
                 .create()
-                .fromJson(jsonBackendResponse, MovieByIdFE.class);
+                .fromJson(jsonBackendResponse, new TypeToken<MovieByIdFE>() {
+                }.getType());
         return backendResponseAsObject;
     }
-    /*public List<BestFilm> buildResponse(String jsonBackendResponse) {
-
-        final List<BestFilm> backendResponseAsObject = new GsonBuilder()
-                .create()
-                .fromJson(jsonBackendResponse, new TypeToken<List<BestFilm>>(){}.getType());
-        return backendResponseAsObject;
-    }*/
 }

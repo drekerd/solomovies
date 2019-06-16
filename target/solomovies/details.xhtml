@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>com.mario.frontend.Hello World JSF</title>
+        <h:outputStylesheet name="css/lookingGoodDetails.css"/>
+
+    </h:head>
+    <h:body>
+        <div class="heads">
+            <h1>
+                <h:outputText value="#{movieDetails.movie.name}"/>
+            </h1>
+        </div>
+
+        <div class="container">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <div class="center-left">
+                    <h:graphicImage class="poster" value="#{movieDetails.movie.thumbnailFullLink}"/>
+                </div>
+                <div class="center-right">
+                    <div>
+                        <br/>
+                        <h:outputText class="headers" value="Tilte"></h:outputText><br/>
+                        <h:outputText class="inputs" value="#{movieDetails.movie.name}"></h:outputText><br/><br/>
+
+                        <h:outputText class="headers" value="Description"></h:outputText><br/>
+                        <h:outputText class="inputs" value="#{movieDetails.movie.description}"></h:outputText><br/><br/>
+
+                        <h:outputText class="headers" value="Release date"></h:outputText><br/>
+                        <h:outputText class="inputs" value="#{movieDetails.movie.releaseDate}"></h:outputText><br/><br/>
+
+                        <h:outputText class="headers" value="User Score"></h:outputText><br/>
+                        <h:outputText class="inputs" value="#{movieDetails.movie.voteAverage}"></h:outputText><br/>
+                        <br/>
+                    </div>
+                    <div>
+                        <h:outputText class="headers" value="Watch Trailer"></h:outputText><br/>
+                        <iframe
+                                width="420" height="315" src="#{movieDetails.movie.trailerFulURL}" frameborder="0" allowfullscreen="false">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </h:body>
+</h:html>
