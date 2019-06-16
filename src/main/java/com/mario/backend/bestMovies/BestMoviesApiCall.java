@@ -23,7 +23,7 @@ import java.util.logging.Level;
 public class BestMoviesApiCall {
     private static final String BASE_URL = "https://api.themoviedb.org/3/discover/movie";
     private static final String API_KEY = "db10e7a8660d7d089fb952a7a4fe4d13";
-    Log bestMoviesLog = new Log("BestMoviesLog.txt");
+    Log bestMoviesLog = new Log();
 
 
     public BestMoviesApiCall() throws IOException {

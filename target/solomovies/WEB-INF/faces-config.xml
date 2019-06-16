@@ -25,19 +25,21 @@ http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
     </managed-bean>
 
     <managed-bean>
+        <managed-bean-name>trendingMovies</managed-bean-name>
+        <managed-bean-class>com.mario.frontend.trendingMovies.TrendingMoviesService</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
         <managed-bean-name>movieByName</managed-bean-name>
         <managed-bean-class>com.mario.frontend.searchMovieByName.MovieByNameService</managed-bean-class>
-        <managed-bean-scope>request</managed-bean-scope>
+        <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
 
     <managed-bean>
         <managed-bean-name>movieDetails</managed-bean-name>
         <managed-bean-class>com.mario.frontend.movies.MovieServiceFE</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
-        <managed-property>
-            <property-name>movieID</property-name>
-            <value>#{movieID}</value>
-        </managed-property>
     </managed-bean>
 
     <managed-bean>

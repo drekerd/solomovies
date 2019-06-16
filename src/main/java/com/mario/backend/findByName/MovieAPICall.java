@@ -26,7 +26,7 @@ import java.util.List;
 @Path("search")
 public class MovieAPICall {
 
-    Log log = new Log("MovieSearch.txt");
+    Log log = new Log();
 
     private final String BASE_URL = "https://api.themoviedb.org/3/search/movie?query=";
     private final String API_KEY = "db10e7a8660d7d089fb952a7a4fe4d13";

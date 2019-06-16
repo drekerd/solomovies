@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>com.mario.frontend.Hello World JSF</title>
+        <h:outputStylesheet name="css/solomovies.css"/>
+
+    </h:head>
+    <h:body>
+        <div class="heads">
+            <h1>
+                <h:outputText value="#{hello.getHello()}"/>
+            </h1>
+        </div>
+        <div class="just-for-space"></div>
+
+        <div class="container">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <div class="by-year">
+                    <h:link class="name" value="Search By Year" target="_blank" onclick="movieService.fetchMovies()"
+                            update=":change" outcome="best.xhtml">
+                        <f:param name="year" value="#{movieService.year}"/>
+                    </h:link>
+                </div>
+
+                <div class="by-name">
+                    <h:link class="name" value="Search Movies" target="_blank" onclick="movieByName.fetchMovies()"
+                            update=":change" outcome="movie.xhtml">
+                        <f:param name="name" value="#{movieByName.name}"/>
+                    </h:link>
+                </div>
+
+                <div class="center">
+                    <div class="just-for-space"></div>
+                    <div class="titles">Trending</div>
+                    <div class="space-name-desc"></div>
+
+                    <h:dataTable class="movie-table" value="#{trendingMovies.movies}" var="movie"
+                                 rowClasses="odd-row, even-row">
+                        <h:column class="movieTable" >
+                            <br/>
+                            <h:link class="name" value="#{movie.name}" target="_blank" onclick="movieDetails.fetchMovies()" update=":change" outcome="details.xhtml">
+                                <f:param name="movieID" value="#{movie.id}"/>
+                            </h:link>
+                            <br/>
+                            <h:graphicImage value = "#{movie.thumbnailFullLink}" width="250" height="400"/>
+                        </h:column>
+                        <h:column class="movieTable" >
+                            <br/>
+                            <h:link class="name" value="#{movie.name}" target="_blank" onclick="movieDetails.fetchMovies()" update=":change" outcome="details.xhtml">
+                                <f:param name="movieID" value="#{movie.id}"/>
+                            </h:link>
+                            <br/>
+                            <h:graphicImage value = "#{movie.thumbnailFullLink}" width="250" height="400"/>
+                        </h:column>
+                    </h:dataTable>
+
+                </div>
+
+            </div>
+        </div>
+    </h:body>
+</h:html>

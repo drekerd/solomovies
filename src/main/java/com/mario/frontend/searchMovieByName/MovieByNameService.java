@@ -27,7 +27,7 @@ public class MovieByNameService implements Serializable {
 
     {
         try {
-            movieByNameLOG = new Log("FEMOVIE.txt");
+            movieByNameLOG = new Log();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -41,12 +41,13 @@ public class MovieByNameService implements Serializable {
 
     @PostConstruct
     public void fetchMovies() {
+        String uri = "http://localhost:8080/search/movie?movie=";
 
-        /*if (name == null) {
-            name = "Interstellar";
-        }*/
+        if (name == null) {
+            uri = "http://localhost:8080/trending/movie";
+        }else
+            uri += name;
 
-        final String uri = "http://localhost:8080/search/movie?movie=" + name;
         movieByNameLOG.logger.info(this.getClass().getName()+" URI " +uri);
         this.backendResponse = callRumosApi(uri);
         this.movies = buildResponse(backendResponse);
@@ -54,7 +55,7 @@ public class MovieByNameService implements Serializable {
     }
 
     public String changePage(){
-        return "movies.xhtml";
+        return "movie.xhtml";
     }
 
     public String getIdParam(FacesContext fc){

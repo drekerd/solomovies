@@ -73,7 +73,7 @@ public class BackEndCallTest {
     @Test
     public void TestSearchByNameAPICall() throws IOException {
         MovieAPICall movie = new MovieAPICall();
-        //System.out.printf(movie.getMoviesByName("Interstellar"));
+        //System.out.printf(movie.getTrendingShows("Interstellar"));
     }
 
     //this is the method for all Tests make their HTTP requests

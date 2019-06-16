@@ -20,13 +20,6 @@
                 <h:inputText class="year" value="#{movieService.year}"/>
                 <h:commandButton value="submit" action="#{movieService.fetchMovies}"/>
             </h:form>
-
-            <h:form target="_blank">
-                <h:inputText class="search" value="#{movieByName.name}"/>
-                <h:commandButton value="submit" action="/movie.xhtml">
-                </h:commandButton>
-            </h:form>
-
         </div>
 
         <div class="container">
