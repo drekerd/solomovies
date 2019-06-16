@@ -1,3 +1,0 @@
-0:0:0:0:0:0:0:1 - - [16/Jun/2019:22:11:33 +0100] "GET /trending/movie HTTP/1.1" 200 9331 http-bio-8080-exec-1 12065
-0:0:0:0:0:0:0:1 - - [16/Jun/2019:22:11:33 +0100] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 3
-0:0:0:0:0:0:0:1 - - [16/Jun/2019:22:11:40 +0100] "GET /trending/tvshow HTTP/1.1" 500 3366 http-bio-8080-exec-4 1755

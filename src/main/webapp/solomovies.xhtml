@@ -41,26 +41,33 @@
                     <div class="titles">Trending</div>
                     <div class="space-name-desc"></div>
 
-                    <h:dataTable class="movie-table" value="#{trendingMovies.movies}" var="movie"
-                                 rowClasses="odd-row, even-row">
-                        <h:column class="movieTable" >
-                            <br/>
-                            <h:link class="name" value="#{movie.name}" target="_blank" onclick="movieDetails.fetchMovies()" update=":change" outcome="details.xhtml">
-                                <f:param name="movieID" value="#{movie.id}"/>
-                            </h:link>
-                            <br/>
-                            <h:graphicImage value = "#{movie.thumbnailFullLink}" width="250" height="400"/>
-                        </h:column>
-                        <h:column class="movieTable" >
-                            <br/>
-                            <h:link class="name" value="#{movie.name}" target="_blank" onclick="movieDetails.fetchMovies()" update=":change" outcome="details.xhtml">
-                                <f:param name="movieID" value="#{movie.id}"/>
-                            </h:link>
-                            <br/>
-                            <h:graphicImage value = "#{movie.thumbnailFullLink}" width="250" height="400"/>
-                        </h:column>
-                    </h:dataTable>
+                    <div class="content-tables">
+                        <h:dataTable class="movie-table" value="#{trendingMovies.movies}" var="movie"
+                                     rowClasses="odd-row, even-row">
+                            <h:column class="movieTable" >
 
+                                <br/>
+                                <h:link class="name" value="#{movie.name}" target="_blank" onclick="movieDetails.fetchMovies()" update=":change" outcome="details.xhtml">
+                                    <f:param name="movieID" value="#{movie.id}"/>
+                                </h:link>
+                                <br/>
+                                <h:graphicImage value = "#{movie.thumbnailFullLink}" width="250" height="400"/>
+                            </h:column>
+                        </h:dataTable>
+
+                        <!--TvShows-->
+                        <h:dataTable class="shows-table" value="#{trendingTv.tvShows}" var="show"
+                                     rowClasses="odd-row, even-row">
+                            <h:column class="showTable" >
+                                <br/>
+                                <h:link class="name" value="#{show.name}" target="_blank" outcome="showdetails.xhtml">
+                                    <!--<f:param name="showID" value="#{show.id}"/>-->
+                                </h:link>
+                                <br/>
+                                <h:graphicImage value="#{show.thumbnailFullLink}" width="250" height="400"/>
+                            </h:column>
+                        </h:dataTable>
+                    </div>
                 </div>
 
             </div>

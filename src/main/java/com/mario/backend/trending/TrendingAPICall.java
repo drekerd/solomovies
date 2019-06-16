@@ -100,7 +100,7 @@ public class TrendingAPICall {
             tvToFE.setName(t.getName());
             tvToFE.setDescription(t.getDescription());
             tvToFE.setThumbnailFullLink(image.getImageForMoiveBURL(t.getThumbnailLink()));
-            tvToFE.setTrailerFulURL(trailer.composeTrailerURL(t.getId()));
+            //tvToFE.setTrailerFulURL(trailer.composeTrailerURL(t.getId()));
 
             tvResponseForFE.add(tvToFE);
         }

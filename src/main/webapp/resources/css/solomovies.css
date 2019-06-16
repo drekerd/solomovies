@@ -15,6 +15,17 @@ background-color: #aa80ff;
 
 .movie-table{
 	border-collapse:collapse;
+	float: left;
+	text-align: center;
+}
+.shows-table{
+	border-collapse:collapse;
+
+}
+
+.showsTable{
+	border-collapse:collapse;
+    width:450px;
 }
 
 .order-table-header{
@@ -80,7 +91,6 @@ width:15%;
 .center {
 margin:0 auto;
 width:70%;
-
 text-align:center;
 }
 
@@ -100,3 +110,7 @@ color: green;
 font-size: 20px;
 }
 
+.content-tables{
+text-align: center;
+padding-left: 80px;
+}
