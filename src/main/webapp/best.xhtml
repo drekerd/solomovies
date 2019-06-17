@@ -11,13 +11,17 @@
     </h:head>
     <h:body>
         <div class="heads">
-            <h1><h:outputText value="#{hello.getHello()}"/></h1>
+            <h:link class="name" value="#{movie.name}" onclick="movieDetails.fetchMovies()" outcome="solomovies.xhtml">
+                <h1><h:outputText value="#{hello.getHello()}"/></h1>
+            </h:link>
         </div>
         <div class="just-for-space"></div>
 
         <div class="combo-box-div">
             <h:form>
-                <h:inputText class="year" value="#{movieService.year}"/>
+                <h:inputText class="year" value="#{movieService.year}">
+                    <!--<f:converter converterId="#{StringTrimmer}"/>-->
+                </h:inputText>
                 <h:commandButton value="submit" action="#{movieService.fetchMovies}"/>
             </h:form>
         </div>

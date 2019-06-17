@@ -11,7 +11,9 @@
     </h:head>
     <h:body>
         <div class="heads">
-            <h1><h:outputText value="#{hello.getHello()}"/></h1>
+            <h:link class="name" value="#{movie.name}" onclick="movieDetails.fetchMovies()" outcome="solomovies.xhtml">
+                <h1><h:outputText value="#{hello.getHello()}"/></h1>
+            </h:link>
         </div>
         <div class="just-for-space"></div>
 
@@ -41,19 +43,6 @@
                     </h:column>
                 </h:dataTable>
             </div>
-
-            <!--<p:dataTable styleClass="movie-table" value="#{movieService.movies}" var="movie"
-                         rowClasses="odd-row, even-row" rows="10" paginator="true">
-                <p:column styleClass="movieTable" >
-                    <h:graphicImage value = "#{movie.thumbnailFullLink}" width="250" height="400"/>
-                </p:column>
-                <p:column>
-                    <h:outputText class="name" value="#{movie.name}"/>
-                    <br/>
-                    <div class="space-name-desc"></div>
-                    <h:outputText class="description" value="#{movie.description}"/>
-                </p:column>
-            </p:dataTable>-->
         </div>
     </h:body>
 </h:html>
