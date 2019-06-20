@@ -43,7 +43,7 @@ public class BestMoviesApiCall {
         String uri = BASE_URL;
 
         if(year != null){
-            uri += "?primary_release_year=" +year+ "&sort_by=vote_average.desc"+"&api_key="+API_KEY;
+            uri += "?primary_release_year=" +year+ "&sort_by=popularity.desc"+"&api_key="+API_KEY;
         }else {
             bestMoviesLog.logger.setLevel(Level.WARNING);
             bestMoviesLog.logger.warning("NO PARAMETER YEAR SELECTED");
